@@ -1,26 +1,17 @@
-# FIGR: *Figure It Out*
-
-**Improve the Frontier of Reasoning with Executable Visual States**
-
+# <img src="docs/fig-logo.png" alt="FIGR logo" width="100"> FIGR: *Figure It Out* 
 This repository contains the **official implementation** of **FIGR**, proposed in the paper:
 
-> **Figure It Out: Improve the Frontier of Reasoning with Executable Visual States**
+> **[Figure It Out: Improve the Frontier of Reasoning with Executable Visual States](https://arxiv.org/abs/2512.24297)**
 
 FIGR introduces **active visual thinking** into multi-turn reasoning via **end-to-end reinforcement learning**.
 Instead of relying solely on text-based chains of thought, FIGR learns **when and how to construct executable visual states (figures)** during reasoning, enabling more reliable handling of complex geometric and structural constraints.
 
----
+<img src="docs/fig-method.png" alt="FIGR overview" width="480">
+
 
 ## ⚙️ Environment Setup
 
-### 1. Create a Python environment
-
-```bash
-conda create -n figr python=3.10
-conda activate figr
-```
-
-### 2. Install from docker image
+### Install from docker image
 
 ```bash
 docker pull verlai/verl:app-verl0.5-transformers4.55.4-sglang0.4.10.post2-mcore0.13.0-te2.2
