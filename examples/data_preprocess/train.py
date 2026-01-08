@@ -1,6 +1,6 @@
 import argparse
 import os
-from datasets import load_dataset, concatenate_datasets
+from datasets import load_dataset
 
 from verl.utils.hdfs_io import copy, makedirs
 
@@ -10,8 +10,7 @@ if __name__ == "__main__":
     parser.add_argument("--hdfs_dir", default=None)
     args = parser.parse_args()
 
-
-    dataset = load_dataset("json", data_files="DeepMath-103K_rl_data.jsonl", split="train")
+    dataset = load_dataset("chenmeiqi/DeepMath-103K-VisualSuitability")
 
     instruction_following_end = '''Let's solve the problem step by step and output the final answer in the following format: \n\\boxed{{The final answer goes here.}}\n\n
 *user question:*\n\n
@@ -20,15 +19,12 @@ if __name__ == "__main__":
     # add a row to each data item that represents a unique id
     def make_map_fn(split):
         def process_fn(example, idx):
-            ori_data = example.pop("ori_data")
-            data_source = example.pop("dataset")
-
-            problem = ori_data["question"]
-            answer = ori_data["final_answer"]
+            problem = example.pop("question") 
+            answer = example.pop("final_answer")
                 
             prompt =  instruction_following_end + problem + "\n\n"
             data = {
-                "data_source": data_source,
+                "data_source": "DeepMath-103K-VisualSuitability",
                 "prompt": [
                     {
                         "role": "user",
