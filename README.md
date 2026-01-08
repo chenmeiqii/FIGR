@@ -18,6 +18,12 @@ docker pull verlai/verl:app-verl0.5-transformers4.55.4-sglang0.4.10.post2-mcore0
 git clone https://github.com/chenmeiqii/FIGR.git && cd verl
 pip3 install -e .[sglang]
 ```
+
+### Interpreter Setup (Sandbox)
+Follow the documentation of [SandboxFusion](https://github.com/bytedance/SandboxFusion) to install the interpreter.
+
+Then replace the host name in `examples/sglang_multiturn/config/tool_config/mm_tool_condig.yaml` with yours.
+
 ---
 
 ## 📊 Data Preparation
