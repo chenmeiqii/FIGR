@@ -49,13 +49,6 @@ python examples/data_preprocess/train_tool.py \
   --local_dir data/train
 ```
 
-**Text-only tool baseline**
-
-```bash
-python examples/data_preprocess/train_tool_txt.py \
-  --local_dir data/train
-```
-
 This will generate `.parquet` files used for RL training.
 
 ---
@@ -75,10 +68,10 @@ This script launches **GRPO-based RL training** with:
 * Executable visual feedback
 * Adaptive visual-invocation rewards
 
-### Text-only multi-turn RL baseline
+### Text-only RL baseline
 
 ```bash
-bash run_to_qwen3vl_txt_multiturn.sh
+bash run_to_qwen3vl_original_comparison.sh
 ```
 
 ---
