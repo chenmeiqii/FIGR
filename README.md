@@ -29,14 +29,13 @@ Then replace the host name in `examples/sglang_multiturn/config/tool_config/mm_t
 ## 📊 Data Preparation
 
 FIGR is trained on **DeepMath-103K**, a large-scale, decontaminated mathematical reasoning dataset.
-We further enhance the DeepMath-103K dataset by annotating each problem with a **suitability tag**, which indicates whether a problem requires visual/diagrammatic reasoning. Data: [TBD]
+We further enhance the DeepMath-103K dataset by annotating each problem with a **suitability tag**, which indicates whether a problem requires visual/diagrammatic reasoning.
 
-
-### 1. Obtain DeepMath-103K
+### 1. Obtain DeepMath-103K-VisualSuitability
 
 ```python
 from datasets import load_dataset
-dataset = load_dataset("zwhe99/DeepMath-103K")
+dataset = load_dataset("chenmeiqi/DeepMath-103K-VisualSuitability")
 ```
 
 ### 2. Prepare RL training data
