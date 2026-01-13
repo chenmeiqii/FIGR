@@ -20,16 +20,15 @@ pip3 install -e .[sglang]
 ```
 
 ### Interpreter Setup (Sandbox)
-Follow the documentation of [SandboxFusion](https://github.com/bytedance/SandboxFusion) to install the interpreter.
+Follow the documentation of [SandboxFusion](https://github.com/bytedance/SandboxFusion) to deploy the interpreter.
 
-Then replace the host name in `examples/sglang_multiturn/config/tool_config/mm_tool_condig.yaml` with yours.
+Then replace the host name in `examples/sglang_multiturn/config/tool_config/mm_tool_config.yaml` with yours.
 
 ---
 
 ## 📊 Data Preparation
 
-FIGR is trained on **DeepMath-103K**, a large-scale, decontaminated mathematical reasoning dataset.
-We further enhance the DeepMath-103K dataset by annotating each problem with a **suitability tag**, which indicates whether a problem requires visual/diagrammatic reasoning.
+FIGR is trained on **[DeepMath-103K-VisualSuitability](https://huggingface.co/datasets/chenmeiqi/DeepMath-103K-VisualSuitability)**, which extends the [DeepMath-103K](https://huggingface.co/datasets/zwhe99/DeepMath-103K/viewer/default/train) dataset by annotating each problem with a **suitability tag**, indicating whether a problem requires visual/diagrammatic reasoning.
 
 ### 1. Obtain DeepMath-103K-VisualSuitability
 
